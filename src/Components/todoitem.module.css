@@ -1,11 +1,23 @@
 .listitem{
-    text-align:center;
+    text-align:left;
     list-style:none;
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0 4px 6px  rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 400px;
     margin: 0 auto;
-    margin-top: 20px;
     border-radius: 8px;
-    height: 20px;
+    font-weight: bolder;
+}
+
+.modernbutton{
+  float: right;
+    padding: 12px 10px;
+    background-color: #f7ca18;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    padding: 12px 20px;
+    margin-top: -12px;
+;
 }
