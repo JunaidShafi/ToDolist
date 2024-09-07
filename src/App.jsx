@@ -1,7 +1,13 @@
-import Todo from "./Components/Todo.jsx";
+import InlineComponent from "./Components/InlineComponent.jsx";
+import OutlineComponent from "./Components/OutlineComponent.jsx";
 
 function App() {
-  return <Todo />;
+  return  <div>
+    <OutlineComponent/>
+    <InlineComponent/>
+
+
+  </div>
 }
 
 export default App;
