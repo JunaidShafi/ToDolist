@@ -1,29 +1,12 @@
-import { useState } from "react";
-import Todoitem from "./Todoitem.jsx";
+import Form from "./Form.jsx";
+import TodoList from "./TodoList.jsx";
+import {useState} from "react";
 export default function Todo() {
-  function clickHandler(e) {
-    e.preventDefault();
-    setToDos([...toDos, item]);
-    console.log(toDos);
-    setItem("");
-  }
-  const [item, setItem] = useState("");
-  const [toDos, setToDos] = useState([]);
+    const [toDos, setToDos] = useState([]);
   return (
     <div>
-      <form>
-        <input
-          onChange={(e) => setItem(e.target.value)}
-          type="text"
-          value={item}
-        />
-        <button onClick={(e) => clickHandler(e)}> Add</button>
-      </form>
-      <ul>
-        {toDos.map((num) => (
-          <Todoitem key={num} item={num} />
-        ))}
-      </ul>
+        <Form key = {toDos} toDos={toDos} setToDos={setToDos}/>
+        <TodoList key={toDos+1} toDos={toDos}/>
     </div>
   );
 }
