@@ -4,7 +4,7 @@ export default function Form({toDos,setToDos}) {
     const [item, setItem] = useState({name:"",status:false});
     function clickHandler(e) {
         e.preventDefault();
-        setToDos([...toDos, item.name]);
+        setToDos([...toDos, item]);
         setItem({name:"",status:false});
     }
     return  <form className={styles.todoform}>
@@ -15,6 +15,8 @@ export default function Form({toDos,setToDos}) {
                    value={item.name}
             />
             <button className={styles.modernbutton} onClick={(e) => clickHandler(e)}> Add</button>
+
+
 
         </div>
     </form>
